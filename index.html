@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>أشرف | رمزون — أنف وأذن وحنجرة</title>
-  <meta name="description" content="عيادة د. أشرف عبده ود. محمد أمين رمزون لطب وجراحة الأنف والأذن والحنجرة. شارع وصفي التل 264، خلدا، عمّان." />
-  <meta name="theme-color" content="#101820" />
+  <title>أشرف | رمزون — تجميل الأنف والتنفس في خلدا</title>
+  <meta name="description" content="عيادة د. أشرف عبده ود. محمد أمين رمزون في خلدا. تجميل الأنف، انسداد التنفس، والجيوب. شارع وصفي التل 264، عمّان." />
+  <meta name="theme-color" content="#0e1620" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_JO" />
+  <meta property="og:title" content="أشرف | رمزون — تجميل الأنف والتنفس في خلدا" />
+  <meta property="og:description" content="عيادة د. أشرف عبده ود. محمد أمين رمزون في خلدا. تجميل الأنف، انسداد التنفس، والجيوب. شارع وصفي التل 264، عمّان." />
+  <meta property="og:image" content="images/hero-duo.png" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script>
+    document.documentElement.classList.add("js");
     try {
       if (localStorage.getItem("ashraf-ramzoun-lang") === "en") {
         document.documentElement.lang = "en";
@@ -55,10 +61,14 @@
       <span class="visually-hidden" data-i18n="nav.menu">القائمة</span>
     </button>
     <nav id="nav-links" class="nav-links" aria-label="Ashraf | Ramzoun">
-      <a href="#about" data-i18n="nav.about">العيادة</a>
-      <a href="#doctors" data-i18n="nav.doctors">الطبيبان</a>
-      <a href="#services" data-i18n="nav.services">الخدمات</a>
-      <a href="#faq" data-i18n="nav.faq">أسئلة</a>
+      <a href="#philosophy" data-i18n="nav.about">العيادة</a>
+      <a href="#doctors" data-i18n="nav.doctors">عن الطبيبين</a>
+      <a href="#specialties" data-i18n="nav.services">التخصصات</a>
+      <a href="#rhinoplasty" data-i18n="nav.rhino">تجميل الأنف</a>
+      <a href="#results" data-i18n="nav.results">النتائج</a>
+      <a href="#cases" data-i18n="nav.cases" data-needs="cases" hidden>الحالات</a>
+      <a href="#media" data-i18n="nav.media" data-needs="media" hidden>المقاطع</a>
+      <a href="#faq" data-i18n="nav.faq">الأسئلة</a>
       <a href="#contact" data-i18n="nav.contact">تواصل</a>
     </nav>
     <div class="nav-tools">
@@ -70,207 +80,264 @@
   <main id="content">
     <section class="hero" id="home">
       <figure class="hero-photo">
-        <img src="assets/duo.jpg" width="948" height="534" alt="د. أشرف عبده ود. محمد أمين رمزون" data-i18n-alt="hero.names" fetchpriority="high" />
+        <img src="images/hero-duo.png" width="960" height="541" alt="د. أشرف عبده ود. محمد أمين رمزون" data-i18n-alt="hero.names" fetchpriority="high" />
       </figure>
-      <div class="wrap hero-band">
-        <div class="hero-copy">
-          <p class="kicker" data-i18n="hero.kicker">أنف · أذن · حنجرة · عمّان</p>
-          <h1>
-            <span data-i18n="hero.l1">طبيبان.</span>
-            <span class="gold" data-i18n="hero.l2">عيادة واحدة.</span>
-          </h1>
-          <p class="names" data-i18n="hero.names">د. أشرف عبده  ·  د. محمد أمين رمزون</p>
-          <p class="lede" data-i18n="hero.lede">في خلدا، شراكة متكافئة لتجميل الأنف ووظيفة التنفس والجيوب والأذن والحنجرة. استشارة واضحة، وخطة تناسب حالتكم.</p>
+      <div class="hero-copy">
+        <p class="kicker light" data-i18n="hero.kicker">الأنف والأذن والحنجرة</p>
+        <h1 data-i18n="hero.title">رعاية متخصصة، تبدأ بفهم احتياجاتك</h1>
+        <p class="names" data-i18n="hero.names">د. أشرف عبده  ·  د. محمد أمين رمزون</p>
+        <p class="lede" data-i18n="hero.lede">من مشكلات التنفّس الأنفي والجيوب الأنفية إلى تجميل الأنف، تبدأ الرعاية بتقييم دقيق لحالتك، وفهم ما يهمّك، ومناقشة الخيارات المناسبة لك بوضوح.</p>
+        <div class="cta-row">
+          <a class="btn btn-ivory" data-whatsapp="true" href="https://wa.me/962776743431">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span data-i18n="hero.wa">تواصل عبر واتساب</span>
+          </a>
+          <a class="btn btn-line" href="tel:+962790595888">
+            <span data-i18n="hero.call">اتصل بالعيادة</span>
+          </a>
         </div>
-        <div class="hero-actions">
-          <div class="cta-row">
-            <a class="btn btn-gold" data-whatsapp="true" href="https://wa.me/962776743431">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.34 4.94L2 22l5.39-1.4a10.1 10.1 0 0 0 4.65 1.14h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.76 14.15c-.24.68-1.4 1.25-1.94 1.33-.5.08-1.12.11-1.81-.11-.41-.14-.95-.31-1.63-.6-2.87-1.24-4.74-4.13-4.88-4.32-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09 1-2.37.24-.26.64-.38.85-.38h.61c.2 0 .46-.02.7.53.24.58.83 2 .9 2.15.07.14.12.32.02.51-.1.19-.14.31-.28.48-.14.17-.3.37-.42.5-.14.14-.28.29-.12.56.16.26.72 1.18 1.54 1.91 1.06.94 1.95 1.24 2.23 1.38.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.26.09 1.62.76 1.9.9.28.14.46.21.53.32.07.12.07.67-.17 1.35z"/></svg>
-              <span data-i18n="cta.whatsapp">واتساب</span>
-            </a>
-            <a class="btn btn-navy" href="tel:+962790595888">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.5.6 3.6.1.4 0 .7-.3 1L6.6 10.8z"/></svg>
-              <span data-i18n="cta.call">اتصال</span>
-            </a>
-          </div>
-          <p class="fine">
-            <span data-i18n="contact.callLabel">اتصال</span>
-            <a href="tel:+962790595888"><bdi dir="ltr">079 059 5888</bdi></a>
-            <a href="tel:+962770595888"><bdi dir="ltr">077 059 5888</bdi></a>
-          </p>
-          <p class="fine">
-            <span data-i18n="contact.waLabel">واتساب</span>
-            <a data-whatsapp="true" href="https://wa.me/962776743431"><bdi dir="ltr">077 674 3431</bdi></a>
-          </p>
-          <p class="fine muted" data-i18n="hero.note">السبت — الخميس، بموعد مسبق</p>
+        <p class="fine" data-i18n="hero.note">السبت إلى الخميس، بموعد مسبق</p>
+      </div>
+    </section>
+
+    <section class="philosophy reveal" id="philosophy">
+      <div class="wrap philosophy-grid">
+        <div>
+          <p class="kicker" data-i18n="about.kicker">العيادة</p>
+          <h2 data-i18n="about.title">الشكل والمجرى يُسألان في الزيارة نفسها.</h2>
+        </div>
+        <div>
+          <p class="lede" data-i18n="about.body">من يريد أنفاً أصغر قد يكون مدخله ضيقاً من غير أن يسمّي ذلك. ومن يأتي بسبب الانسداد قد يتغير شكل أنفه إذا عولج الحاجز أو الطرف. لذلك لا نفصل السؤالين. هذا لا يعني أن كل تجميل يحتاج جراحة وظيفية، ولا أن كل انسداد يحتاج تعديلاً في المظهر.</p>
+          <ul class="points">
+            <li><span>01</span><span data-i18n="about.p1">المجرى — الحاجز والقرينات يقرران كمية الهواء، لا الخط الذي ترونه في المرآة.</span></li>
+            <li><span>02</span><span data-i18n="about.p2">الدعامة — ظهر الأنف وطرفه غضروف وعظم. الشكل الخارجي نتيجة هذه الدعامة، لا طبقة تُستبدل.</span></li>
+            <li><span>03</span><span data-i18n="about.p3">الوجه — حجم الأنف يُقرأ مع الجبهة والذقن، لا مع صورة محفوظة لشخص آخر.</span></li>
+            <li><span>04</span><span data-i18n="about.p4">الجيوب — الضغط والإفراز والانسداد المتبدل قد يأتي من الجيب، لا من الحاجز وحده.</span></li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="about" id="about">
+    <section class="doctors reveal" id="doctors">
       <div class="wrap">
-        <p class="kicker light" data-i18n="about.kicker">01  —  العيادة</p>
-        <div class="about-grid">
-          <h2 data-i18n="about.title">عناية خاصة في خلدا</h2>
-          <p data-i18n="about.body">أشرف | رمزون عيادة خاصة على شارع وصفي التل. الطبيبان شريكان متكافئان تحت سقف واحد: شرح مباشر، وقرار علاجي مبني على الفحص، لا على وعود عامة.</p>
-        </div>
-        <div class="facts">
-          <div>
-            <p class="fact-label" data-i18n="about.f1l">الموقع</p>
-            <p data-i18n="about.f1v">شارع وصفي التل 264، خلدا، عمّان 11821</p>
-          </div>
-          <div>
-            <p class="fact-label" data-i18n="about.f2l">المواعيد</p>
-            <p data-i18n="about.f2v">السبت إلى الخميس، بموعد مسبق</p>
-          </div>
-          <div>
-            <p class="fact-label" data-i18n="about.f3l">الحجز</p>
-            <p data-i18n="about.f3v">واتساب أو اتصال، ونؤكد الوقت معكم</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="doctors" id="doctors">
-      <div class="wrap">
-        <p class="kicker" data-i18n="doctors.kicker">02  —  الطبيبان</p>
-        <h2 data-i18n="doctors.title">شريكان في العيادة نفسها</h2>
-        <p class="section-intro" data-i18n="doctors.intro">اسم العيادة يجمعهما. كل طبيب يستقبل مرضاه، ولكم عند الحجز أن تطلبوا الطبيب الذي تريدون.</p>
+        <p class="kicker" data-i18n="doctors.kicker">عن الطبيبين</p>
+        <h2 data-i18n="doctors.title">عن الطبيبين</h2>
+        <p class="section-intro" data-i18n="doctors.intro">تعرّف إلى د. أشرف عبده ود. محمد أمين رمزون، ونهجهما في رعاية حالات الأنف والأذن والحنجرة. يهدف التقييم الطبي إلى فهم الأعراض واحتياجات كل مريض، وشرح الخيارات المتاحة بوضوح، ومساعدته على اتخاذ قرار مناسب لحالته.</p>
         <div class="doctor-grid">
           <article class="doctor">
             <figure class="portrait">
-              <img src="assets/ashraf.jpg" alt="د. أشرف عبده" data-i18n-alt="ashraf.name" />
+              <img class="ashraf" src="images/dr-abdoh.png" alt="د. أشرف عبده" data-i18n-alt="ashraf.name" data-hide-missing loading="lazy" />
             </figure>
-            <h3 data-i18n="ashraf.name">د. أشرف عبده</h3>
             <p class="role" data-i18n="ashraf.role">أخصائي أنف وأذن وحنجرة · تجميل الأنف</p>
-            <p data-i18n="ashraf.bio">يقدّم جراحة وتجميل الأنف مع الاهتمام بشكل الوجه ووظيفة التنفس، إلى جانب أمراض الأذن والحنجرة.</p>
+            <h3 data-i18n="ashraf.name">د. أشرف عبده</h3>
+            <p data-i18n="ashraf.bio">يركز على تجميل الأنف حين يكون السؤال عن الظهر أو الطرف أو تناسب الوجه، ويفحص المجرى في الزيارة نفسها حتى لا يُرسم الشكل من الخارج وحده.</p>
             <ul class="creds">
               <li data-i18n="ashraf.c1">البورد الأردني في الأنف والأذن والحنجرة</li>
               <li data-i18n="ashraf.c2">MRCS (ENT) — الكلية الملكية للأطباء والجراحين في غلاسكو</li>
               <li data-i18n="ashraf.c3">DO-HNS — الكلية الملكية للجراحين في إيرلندا</li>
               <li data-i18n="ashraf.c4">Rhinoplasty Society of Europe</li>
             </ul>
-            <a class="text-link" href="https://www.instagram.com/ashrafabdoh/" target="_blank" rel="noopener noreferrer" data-i18n="ashraf.ig">إنستغرام</a>
+            <a class="icon-link" href="https://www.instagram.com/ashrafabdoh/" target="_blank" rel="noopener noreferrer" data-i18n-aria="ashraf.igLabel" aria-label="إنستغرام، د. أشرف عبده"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor"/></svg></a>
           </article>
           <article class="doctor">
             <figure class="portrait">
-              <img src="assets/ramzown.png" alt="د. محمد أمين رمزون" data-i18n-alt="ramzown.name" />
+              <img src="assets/ramzown.png" alt="د. محمد أمين رمزون" data-i18n-alt="ramzown.name" data-hide-missing loading="lazy" />
             </figure>
-            <h3 data-i18n="ramzown.name">د. محمد أمين رمزون</h3>
             <p class="role" data-i18n="ramzown.role">استشاري أنف وأذن وحنجرة · علم الأنف</p>
-            <p data-i18n="ramzown.bio">استشاري أنف وأذن وحنجرة. حاصل على زمالة علم الأنف وجراحة الجيوب من مركز سانت إليزابيث الطبي التابع لجامعة تافتس في بوسطن. في العيادة يعتني بوظيفة الأنف والجيوب، وبالأذن والحنجرة.</p>
+            <h3 data-i18n="ramzown.name">د. محمد أمين رمزون</h3>
+            <p data-i18n="ramzown.bio">يركز على انسداد الأنف والجيوب: الحاجز، والقرينات، والالتهاب الذي لا يهدأ بالعلاج. الزمالة أدناه من مركز سانت إليزابيث الطبي التابع لجامعة تافتس في بوسطن، وقد أكملها هناك. عمله الآن في هذه العيادة.</p>
             <ul class="creds">
               <li data-i18n="ramzown.c1">البورد الأردني في الأنف والأذن والحنجرة</li>
               <li data-i18n="ramzown.c2">MRCS</li>
               <li data-i18n="ramzown.c3">DOHNS — الكلية الملكية للجراحين في إيرلندا</li>
               <li data-i18n="ramzown.c4">زمالة علم الأنف وجراحة الجيوب — جامعة تافتس، بوسطن</li>
             </ul>
-            <a class="text-link" href="https://www.instagram.com/dr_mohamadramzown/" target="_blank" rel="noopener noreferrer" data-i18n="ramzown.ig">إنستغرام</a>
+            <a class="icon-link" href="https://www.instagram.com/dr_mohamadramzown/" target="_blank" rel="noopener noreferrer" data-i18n-aria="ramzown.igLabel" aria-label="إنستغرام، د. محمد أمين رمزون"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor"/></svg></a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="services" id="services">
+    <section class="specialties reveal" id="specialties">
       <div class="wrap">
-        <p class="kicker" data-i18n="services.kicker">03  —  الخدمات</p>
+        <p class="kicker" data-i18n="services.kicker">التخصصات</p>
         <div class="section-head">
-          <h2 data-i18n="services.title">ما نعتني به</h2>
-          <p data-i18n="services.intro">الخدمة تُحدد بعد الفحص. هذه المجالات التي تستقبلها العيادة.</p>
+          <h2 data-i18n="services.title">ما يُفحص في العيادة</h2>
+          <p data-i18n="services.intro">المجالان الأولان هما أكثر ما يُطلب. الأذن والحنجرة والأطفال جزء من عمل العيادة اليومي.</p>
         </div>
-        <ol class="service-list">
-          <li>
+        <div class="lead-grid">
+          <article>
             <span class="num">01</span>
-            <div>
-              <h3 data-i18n="s1.t">تجميل الأنف</h3>
-              <p data-i18n="s1.d">تجميل يُخطط حسب ملامح الوجه ووظيفة التنفس، بعد استشارة صريحة وقبل أي قرار.</p>
-            </div>
-          </li>
-          <li>
+            <h3 data-i18n="s1.t">تجميل الأنف</h3>
+            <p data-i18n="s1.d">لمن يريد تغيير ظهر الأنف أو طرفه أو عرضه. نراجع التنفس قبل أي اتفاق، لأن التصغير قد يضيّق مدخلاً كان ضيقاً. ليس كل من يطلب التجميع بحاجة إلى جراحة حاجز.</p>
+          </article>
+          <article>
             <span class="num">02</span>
-            <div>
-              <h3 data-i18n="s2.t">وظيفة الأنف</h3>
-              <p data-i18n="s2.d">انحراف الحاجز، ضخامة القرينات، وانسداد التنفس. تقييم أولاً، ثم خطة دوائية أو جراحية حسب الحالة.</p>
-            </div>
-          </li>
+            <h3 data-i18n="s2.t">انسداد التنفس</h3>
+            <p data-i18n="s2.d">انسداد ثابت من جهة، أو فرق بين فتحتي الأنف، أو النوم والفم مفتوح. الحاجز والقرينات هما السببان الميكانيكيان الأكثر شيوعاً. إذا كان السبب التهاباً نبدأ بالدواء، والجراحة تُطرح حين يبقى الانسداد بعد معرفة مصدره.</p>
+          </article>
+        </div>
+        <ol class="quiet-list">
           <li>
             <span class="num">03</span>
             <div>
               <h3 data-i18n="s3.t">الجيوب الأنفية</h3>
-              <p data-i18n="s3.d">التهاب الجيوب المزمن، الانسداد، والضغط المرتبط بالأنف. العلاج دوائي أو جراحي بعد التشخيص.</p>
+              <p data-i18n="s3.d">ضغط في الوجه، إفراز لا ينقطع، أو احتقان يعود بعد علاج مناسب. الالتهاب الحاد غالباً دواء. جراحة الجيوب ليست الخطوة الأولى، وتُناقش إذا استمر المرض وبعد معرفة موضع الانسداد.</p>
             </div>
           </li>
           <li>
             <span class="num">04</span>
             <div>
               <h3 data-i18n="s4.t">الأذن</h3>
-              <p data-i18n="s4.d">التهابات، تغيّر السمع، طنين، ودوخة. فحص وشرح للخيارات بلغة واضحة.</p>
+              <p data-i18n="s4.d">ألم، نقص في السمع، طنين، أو دوخة. الفحص يفرق بين التهاب ظاهر ومشكلة في الأذن الوسطى أو الداخلية. لا يُستنتج السبب من رسالة.</p>
             </div>
           </li>
           <li>
             <span class="num">05</span>
             <div>
-              <h3 data-i18n="s5.t">الحنجرة والصوت</h3>
-              <p data-i18n="s5.d">بحة الصوت، إزعاج الحلق، وصعوبة البلع.</p>
+              <h3 data-i18n="s5.t">الصوت والحنجرة</h3>
+              <p data-i18n="s5.d">بحة لا تزول، إحساس بجسم في الحلق، أو صعوبة في البلع. البحة التي تستمر تحتاج رؤية الحنجرة.</p>
             </div>
           </li>
           <li>
             <span class="num">06</span>
             <div>
               <h3 data-i18n="s6.t">الأطفال</h3>
-              <p data-i18n="s6.d">لوز، لحمية، التهابات الأذن، والشخير عند الأطفال.</p>
+              <p data-i18n="s6.d">التهاب لوز متكرر، لحمية، التهاب أذن، أو شخير. عند الطفل نسأل عن النوم والأكل وعدد الالتهابات، لا عن حجم اللوز وحدها.</p>
             </div>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="faq" id="faq">
+    <section class="feature reveal" id="rhinoplasty">
+      <div class="wrap feature-grid">
+        <figure class="feature-photo">
+          <img class="ashraf" src="images/dr-abdoh.png" alt="د. أشرف عبده" data-i18n-alt="ashraf.name" data-hide-missing loading="lazy" />
+        </figure>
+        <div>
+          <p class="kicker light" data-i18n="rhino.kicker">تجميل الأنف</p>
+          <h2 data-i18n="rhino.title">ماذا تغيّر العملية، وماذا لا نعد به.</h2>
+          <p data-i18n="rhino.body">تجميل الأنف يعمل على العظم والغضروف: الظهر، والطرف، وأحياناً الحاجز إذا كان يضيّق المدخل. المظهر نتيجة هذه الدعامة. نقيس التنفس قبل التخطيط. إذا كان المجرى مفتوحاً لا نضيف خطوة وظيفية بلا سبب، وإذا كان ضيقاً نقول ذلك قبل القرار. النتيجة تتبع الوجه، ولا تُنسخ من صورة.</p>
+          <ul class="points light">
+            <li><span data-i18n="rhino.a">الظهر والطرف</span></li>
+            <li><span data-i18n="rhino.b">الحاجز إن ضاق</span></li>
+            <li><span data-i18n="rhino.c">التنفس قبل الشكل</span></li>
+            <li><span data-i18n="rhino.d">لا صورة كنموذج</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="results reveal" id="results">
+      <div class="wrap">
+        <h2 data-i18n="results.title">النتائج</h2>
+        <div class="results-stage">
+          <button type="button" class="results-arrow" id="results-prev" data-i18n-aria="results.prev" aria-label="الصورة السابقة">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="results-track" id="results-track" tabindex="0" data-i18n-aria="results.label" aria-label="معرض النتائج">
+            <figure>
+              <img src="assets/503029010_2082641725558467_8811911825648532846_n.jpg" width="1080" height="1920" alt="صورة سريرية أمامية لأنف مع غرز" data-i18n-alt="results.a1" decoding="async" />
+            </figure>
+            <figure>
+              <img src="assets/641226182_894859253389203_2193830092409573715_n.jpg" width="640" height="1136" alt="صورة سريرية جانبية لأنف مع غرز" data-i18n-alt="results.a2" decoding="async" />
+            </figure>
+            <figure>
+              <img src="assets/731357062_18598887103039397_4740634666436170698_n.jpg" width="3274" height="4096" alt="صورة سريرية جانبية لأنف" data-i18n-alt="results.a3" decoding="async" />
+            </figure>
+          </div>
+          <button type="button" class="results-arrow" id="results-next" data-i18n-aria="results.next" aria-label="الصورة التالية">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cases reveal" id="cases" hidden>
+      <div class="wrap">
+        <p class="kicker" data-i18n="cases.kicker">الحالات</p>
+        <h2 data-i18n="cases.title">قبل العملية وبعدها</h2>
+        <p class="section-intro" data-i18n="cases.intro">لكل حالة صورتان. الإضاءة والزاوية والوجه ليست وجهكم، والشكل هنا لا يُعاد كما هو.</p>
+        <div id="case-grid" class="case-grid"></div>
+      </div>
+    </section>
+
+    <section class="media reveal" id="media" hidden>
+      <div class="wrap">
+        <p class="kicker" data-i18n="media.kicker">المقاطع</p>
+        <h2 data-i18n="media.title">من العيادة، باختصار</h2>
+        <p class="section-intro" data-i18n="media.intro">مقطعان قصيران يُشغَّلان في الصفحة. يظهر فيهما أسلوب الحديث في العيادة. ليسا استشارة، ولا يغنيان عن الفحص.</p>
+        <div id="video-grid" class="video-grid"></div>
+      </div>
+    </section>
+
+    <section class="journey reveal" id="journey">
+      <div class="wrap">
+        <p class="kicker" data-i18n="journey.kicker">الزيارة</p>
+        <h2 data-i18n="journey.title">من أول زيارة إلى المتابعة</h2>
+        <ol class="steps">
+          <li>
+            <span>01</span>
+            <h3 data-i18n="j1.t">الاستماع</h3>
+            <p data-i18n="j1.d">نسأل ماذا يزعجكم، منذ متى، وما الذي جرّبتموه. الشكل والتنفس يبقيان سؤالين حتى لو جئتم بهما معاً.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <h3 data-i18n="j2.t">الفحص</h3>
+            <p data-i18n="j2.d">نرى الأنف من الخارج وننظر داخل المجرى. إذا كانت الشكوى في الأذن أو الحنجرة فالفحص هناك، ثم نسمّي ما وجدناه بكلام مفهوم.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <h3 data-i18n="j3.t">الخيارات</h3>
+            <p data-i18n="j3.d">إن كان الدواء كافياً نقول لماذا. إن طُرحت الجراحة نحدد ماذا تغيّر وماذا تترك، مع المخاطر التي تخص هذه الحالة.</p>
+          </li>
+          <li>
+            <span>04</span>
+            <h3 data-i18n="j4.t">القرار</h3>
+            <p data-i18n="j4.d">لا يُجرى شيء في يوم الشرح إلا بعد أن تفهموا السبب وتوافقوا. بعض الانسداد يتحسن بلا عملية.</p>
+          </li>
+          <li>
+            <span>05</span>
+            <h3 data-i18n="j5.t">المتابعة</h3>
+            <p data-i18n="j5.d">بعد أي إجراء نراكم مرة أخرى. في تجميل الأنف يبقى التورم ظاهراً في البداية، والصورة المبكرة ليست الشكل الأخير. موعد العودة يُحدد حسب ما أُجري.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="faq reveal" id="faq">
       <div class="wrap narrow">
-        <p class="kicker" data-i18n="faq.kicker">04  —  أسئلة</p>
-        <h2 data-i18n="faq.title">قبل الزيارة</h2>
+        <p class="kicker" data-i18n="faq.kicker">أسئلة</p>
+        <h2 data-i18n="faq.title">إجابات مباشرة</h2>
         <div class="faq-list">
           <div class="faq-item">
-            <button type="button" aria-expanded="false">
-              <span data-i18n="q1">كيف أحجز موعداً؟</span>
-              <i aria-hidden="true"></i>
-            </button>
-            <div class="faq-a"><div><p data-i18n="a1">عبر واتساب على 077 674 3431، أو بالاتصال على 079 059 5888 أو 077 059 5888. نؤكد الموعد معكم مباشرة.</p></div></div>
+            <button type="button" aria-expanded="false"><span data-i18n="q1">هل أستطيع الحصول على أنف رأيته في صورة؟</span><i aria-hidden="true"></i></button>
+            <div class="faq-a"><div><p data-i18n="a1">لا. الصورة مفيدة لنعرف ما الذي يزعجكم، لكنها ليست قالبًا. العملية تعمل على عظمكم وغضروفكم، والحجم الممكن يتبع عرض الوجه والذقن وسمك الجلد. ما يُتفق عليه هو اتجاه التغيير، لا نسخة من شخص آخر.</p></div></div>
           </div>
           <div class="faq-item">
-            <button type="button" aria-expanded="false">
-              <span data-i18n="q2">أين تقع العيادة؟</span>
-              <i aria-hidden="true"></i>
-            </button>
-            <div class="faq-a"><div><p data-i18n="a2">شارع وصفي التل 264، خلدا، عمّان 11821، الأردن.</p></div></div>
+            <button type="button" aria-expanded="false"><span data-i18n="q2">هل تجميل الأنف يحسّن التنفس؟</span><i aria-hidden="true"></i></button>
+            <div class="faq-a"><div><p data-i18n="a2">ليس بالضرورة. إذا كان الهدف شكلاً والمجرى مفتوحاً، لا نعد بفرق في الهواء. إذا كان الظهر أو الطرف أو الحاجز يضيّق المدخل، فالتصغير غير المحسوب قد يزيد الضيق، ولذلك يُقاس التنفس قبل التخطيط. الفحص هو الذي يضع حالتكم في أحد هذين الطريقين.</p></div></div>
           </div>
           <div class="faq-item">
-            <button type="button" aria-expanded="false">
-              <span data-i18n="q3">ما أوقات العمل؟</span>
-              <i aria-hidden="true"></i>
-            </button>
-            <div class="faq-a"><div><p data-i18n="a3">من السبت إلى الخميس، بموعد مسبق. ساعات اليوم تُؤكد عند الحجز.</p></div></div>
+            <button type="button" aria-expanded="false"><span data-i18n="q3">أنفي مسدود. هل السبب انحراف الحاجز؟</span><i aria-hidden="true"></i></button>
+            <div class="faq-a"><div><p data-i18n="a3">أحياناً، وليس دائماً. الحاجز يفسّر الانسداد الثابت الذي يميل إلى جهة. القرينات تتورم وتنكمش وقد تغلق الجهة الأخرى، والجيوب تضيف إفرازاً واحتقاناً، والحساسية تجعل الانسداد يتغير خلال اليوم وغالباً ما تُعالج دواءً. لا نقرر جراحة حاجز من الكلام وحده.</p></div></div>
           </div>
           <div class="faq-item">
-            <button type="button" aria-expanded="false">
-              <span data-i18n="q4">هل أختار الطبيب؟</span>
-              <i aria-hidden="true"></i>
-            </button>
-            <div class="faq-a"><div><p data-i18n="a4">نعم. عند الحجز اطلبوا د. أشرف عبده أو د. محمد أمين رمزون.</p></div></div>
+            <button type="button" aria-expanded="false"><span data-i18n="q4">هل كل مشكلة في الجيوب تحتاج عملية؟</span><i aria-hidden="true"></i></button>
+            <div class="faq-a"><div><p data-i18n="a4">لا. الالتهاب الحاد غالباً يتحسن بالدواء. العملية تُناقش إذا بقي الألم أو الإفراز أو الانسداد رغم علاج مناسب، وبعد أن نعرف إن كان الضيق عند فتحة الجيب. الشعور بالضغط وحده لا يكفي لاختيار الجراحة.</p></div></div>
           </div>
           <div class="faq-item">
-            <button type="button" aria-expanded="false">
-              <span data-i18n="q5">بماذا يختلف عمل الطبيبين؟</span>
-              <i aria-hidden="true"></i>
-            </button>
-            <div class="faq-a"><div><p data-i18n="a5">الاثنان طبيبا أنف وأذن وحنجرة في العيادة نفسها. د. أشرف عبده يركّز على تجميل الأنف، ود. محمد أمين رمزون على علم الأنف والجيوب. كلاهما يستقبل مرضى الأذن والحنجرة.</p></div></div>
+            <button type="button" aria-expanded="false"><span data-i18n="q5">ماذا يحدث في أول زيارة؟</span><i aria-hidden="true"></i></button>
+            <div class="faq-a"><div><p data-i18n="a5">نسمع الشكوى ثم نفحص. في الأنف ننظر إلى الشكل وإلى داخل المجرى، ونقول إن كان ما ترونه راجعاً إلى الدعامة أو إلى التوقع، وإن كان الانسداد من الحاجز أو القرينات أو الجيوب. تخرجون بخيارات وسبب كل خيار. واتساب لا يغني عن هذه الزيارة.</p></div></div>
           </div>
           <div class="faq-item">
-            <button type="button" aria-expanded="false">
-              <span data-i18n="q6">هل ما أقرأه هنا تشخيص؟</span>
-              <i aria-hidden="true"></i>
-            </button>
-            <div class="faq-a"><div><p data-i18n="a6">لا. محتوى الموقع تعريفي ولا يغني عن الفحص، وليس وعداً بنتيجة علاج.</p></div></div>
+            <button type="button" aria-expanded="false"><span data-i18n="q6">متى أعود إلى عملي بعد العملية؟</span><i aria-hidden="true"></i></button>
+            <div class="faq-a"><div><p data-i18n="a6">لا ننشر عدداً ثابتاً من الأيام، لأن المدة تتبع نوع الإجراء وسرعة زوال التورم. بعد تجميل الأنف يظهر تورم يراه الناس حولكم أولاً ثم يخف، والشكل يستقر بعد ذلك. بعد الحاجز أو الجيوب يكون الانزعاج اليومي أقصر في العادة. ما يخص العمل والنظارات والرياضة يُقال في العيادة لحالتكم.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button type="button" aria-expanded="false"><span data-i18n="q7">متى تكفي الرسالة، ومتى يجب أن أحضر؟</span><i aria-hidden="true"></i></button>
+            <div class="faq-a"><div><p data-i18n="a7">الرسالة تكفي لحجز الموعد أو لسؤال قصير بعد أن نكون قد فحصناكم. لا يُشخَّص انسداد أو بحة أو دوخة من الوصف. احضروا إذا ساء التنفس فجأة، أو طالت البحة، أو صار الألم والإفراز بعد إجراء مختلفين عما شُرح لكم.</p></div></div>
           </div>
         </div>
       </div>
@@ -279,45 +346,44 @@
     <section class="contact" id="contact">
       <div class="wrap contact-grid">
         <div>
-          <p class="kicker light" data-i18n="contact.kicker">05  —  تواصل</p>
-          <h2 data-i18n="contact.title">احجزوا الموعد</h2>
-          <p class="lede light" data-i18n="contact.lede">واتساب أو اتصال. اذكروا اسم الطبيب إن كان لديكم تفضيل.</p>
+          <p class="kicker light" data-i18n="contact.kicker">الموعد</p>
+          <h2 data-i18n="contact.title">لحجز موعد في خلدا</h2>
+          <p class="lede light" data-i18n="contact.lede">اكتبوا على واتساب أو اتصلوا بأحد الرقمين. اذكروا الطبيب الذي تفضلونه إن وجد، وسبب الزيارة باختصار.</p>
           <div class="phone-block">
             <p class="fact-label" data-i18n="contact.waLabel">واتساب</p>
-            <a class="phone-link" data-whatsapp="true" href="https://wa.me/962776743431"><bdi dir="ltr">077 674 3431</bdi></a>
+            <a class="phone-link with-icon" data-whatsapp="true" href="https://wa.me/962776743431"><svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><bdi dir="ltr">077 674 3431</bdi></a>
           </div>
           <div class="phone-block">
-            <p class="fact-label" data-i18n="contact.callLabel">اتصال</p>
+            <p class="fact-label" data-i18n="contact.callLabel">للاتصال</p>
             <a class="phone-link" href="tel:+962790595888"><bdi dir="ltr">079 059 5888</bdi></a>
             <a class="phone-link" href="tel:+962770595888"><bdi dir="ltr">077 059 5888</bdi></a>
           </div>
           <div class="phone-block">
-            <p class="fact-label" data-i18n="contact.hoursLabel">الأوقات</p>
-            <p data-i18n="contact.hours">السبت — الخميس · بموعد مسبق</p>
+            <p class="fact-label" data-i18n="contact.hoursLabel">الأيام</p>
+            <p data-i18n="contact.hours">السبت إلى الخميس، بموعد مسبق</p>
           </div>
           <div class="phone-block">
             <p class="fact-label" data-i18n="contact.addressLabel">العنوان</p>
             <p data-i18n="contact.address">شارع وصفي التل 264، خلدا، عمّان 11821، الأردن</p>
           </div>
           <div class="cta-row contact-cta">
-            <a class="btn btn-gold" data-whatsapp="true" href="https://wa.me/962776743431">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.34 4.94L2 22l5.39-1.4a10.1 10.1 0 0 0 4.65 1.14h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.76 14.15c-.24.68-1.4 1.25-1.94 1.33-.5.08-1.12.11-1.81-.11-.41-.14-.95-.31-1.63-.6-2.87-1.24-4.74-4.13-4.88-4.32-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09 1-2.37.24-.26.64-.38.85-.38h.61c.2 0 .46-.02.7.53.24.58.83 2 .9 2.15.07.14.12.32.02.51-.1.19-.14.31-.28.48-.14.17-.3.37-.42.5-.14.14-.28.29-.12.56.16.26.72 1.18 1.54 1.91 1.06.94 1.95 1.24 2.23 1.38.28.14.44.12.6-.07.17-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.26.09 1.62.76 1.9.9.28.14.46.21.53.32.07.12.07.67-.17 1.35z"/></svg>
-              <span data-i18n="cta.whatsapp">واتساب</span>
+            <a class="btn btn-ivory" data-whatsapp="true" href="https://wa.me/962776743431">
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span data-i18n="cta.whatsapp">احجز عبر واتساب</span>
             </a>
-            <a class="btn btn-cream" href="tel:+962790595888">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.5.6 3.6.1.4 0 .7-.3 1L6.6 10.8z"/></svg>
-              <span data-i18n="cta.call">اتصال</span>
+            <a class="btn btn-line" href="tel:+962790595888">
+              <span data-i18n="contact.callCta">اتصل بالعيادة</span>
             </a>
           </div>
           <p class="ig-row">
             <span data-i18n="contact.ig">إنستغرام</span>
-            <a href="https://www.instagram.com/ashrafabdoh/" target="_blank" rel="noopener noreferrer">ashrafabdoh</a>
-            <a href="https://www.instagram.com/dr_mohamadramzown/" target="_blank" rel="noopener noreferrer">dr_mohamadramzown</a>
+            <a class="icon-link" href="https://www.instagram.com/ashrafabdoh/" target="_blank" rel="noopener noreferrer" data-i18n-aria="ashraf.igLabel" aria-label="إنستغرام، د. أشرف عبده"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor"/></svg></a>
+            <a class="icon-link" href="https://www.instagram.com/dr_mohamadramzown/" target="_blank" rel="noopener noreferrer" data-i18n-aria="ramzown.igLabel" aria-label="إنستغرام، د. محمد أمين رمزون"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor"/></svg></a>
           </p>
         </div>
         <div class="map-panel">
-          <iframe id="map" title="264 Wasfi Al Tal Street, Amman" src="https://maps.google.com/maps?q=264%20Wasfi%20Al%20Tal%20Street%2C%20Amman%2011821%2C%20Jordan&amp;z=16&amp;hl=ar&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <a class="text-link light" href="https://www.google.com/maps/search/?api=1&amp;query=264+Wasfi+Al+Tal+Street,+Amman+11821,+Jordan" target="_blank" rel="noopener noreferrer" data-i18n="contact.map">افتح الخريطة</a>
+          <iframe id="map" title="خريطة عيادة أشرف | رمزون، شارع وصفي التل، خلدا" src="https://maps.google.com/maps?q=264%20Wasfi%20Al%20Tal%20Street%2C%20Amman%2011821%2C%20Jordan&amp;z=16&amp;hl=ar&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a class="text-link light" href="https://www.google.com/maps/search/?api=1&amp;query=264+Wasfi+Al+Tal+Street,+Amman+11821,+Jordan" target="_blank" rel="noopener noreferrer" data-i18n="contact.map">افتح الموقع في خرائط جوجل</a>
         </div>
       </div>
     </section>
@@ -330,19 +396,34 @@
         <span class="logo-rule" aria-hidden="true"></span>
         <span>Ramzoun</span>
       </a>
-      <p data-i18n="footer.note">المحتوى تعريفي ولا يُعد تشخيصاً أو وعداً بنتيجة علاج.</p>
+      <p data-i18n="footer.note">هذا الموقع للتعريف بالعيادة فقط. لا يغني عن الفحص، وليس تشخيصاً، ولا وعداً بشكل أو بتحسن في التنفس.</p>
       <p class="legal"><span data-i18n="footer.rights">جميع الحقوق محفوظة</span> · <span id="year">2026</span></p>
     </div>
   </footer>
 
   <div class="mobile-bar">
-    <a class="btn btn-gold" data-whatsapp="true" href="https://wa.me/962776743431">
-      <span data-i18n="cta.whatsapp">واتساب</span>
-    </a>
-    <a class="btn btn-navy" href="tel:+962790595888">
-      <span data-i18n="cta.call">اتصال</span>
-    </a>
+    <a class="btn btn-ivory" data-whatsapp="true" href="https://wa.me/962776743431"><svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="cta.shortWa">واتساب</span></a>
+    <a class="btn btn-line" href="tel:+962790595888"><span data-i18n="cta.call">اتصل</span></a>
   </div>
+
+  <dialog id="case-dialog" aria-labelledby="case-label">
+    <button type="button" class="dialog-close" data-close-dialog data-i18n="cases.close">إغلاق</button>
+    <p class="kicker" id="case-label"></p>
+    <div class="case-frame">
+      <img id="case-img" alt="" />
+    </div>
+    <div class="case-switch" role="group" aria-label="عرض الصورة قبل الإجراء أو بعده">
+      <button type="button" id="case-before" data-i18n="cases.before">قبل</button>
+      <button type="button" id="case-after" data-i18n="cases.after">بعد</button>
+    </div>
+    <p class="fine" data-i18n="cases.note">حالة واحدة. التورم والشكل النهائي يختلفان من شخص إلى آخر.</p>
+  </dialog>
+
+  <dialog id="video-dialog" aria-labelledby="video-label">
+    <button type="button" class="dialog-close" data-close-dialog data-i18n="media.close">إغلاق</button>
+    <p class="kicker" id="video-label"></p>
+    <video id="player" controls playsinline preload="none"></video>
+  </dialog>
 
   <script src="main.js"></script>
 </body>
