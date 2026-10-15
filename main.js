@@ -321,8 +321,8 @@
   }
 
   function mapSrc(current) {
-    var q = encodeURIComponent("264 Wasfi Al Tal Street, Amman 11821, Jordan");
-    return "https://maps.google.com/maps?q=" + q + "&z=16&hl=" + (current === "ar" ? "ar" : "en") + "&output=embed";
+    var q = encodeURIComponent("Sara Saudi Medical / Khalda, Wasfi At-Tall Street 268, Amman, Jordan");
+    return "https://maps.google.com/maps?q=" + q + "&z=18&hl=" + (current === "ar" ? "ar" : "en") + "&output=embed";
   }
 
   function setMeta(attr, name, value) {

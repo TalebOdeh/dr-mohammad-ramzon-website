@@ -424,11 +424,9 @@ html[lang="en"] .hero h1 {
   margin-bottom: 18px;
 }
 
-.portrait img.ashraf,
-.feature-photo img.ashraf {
-  object-position: 42% 24%;
-  transform: scale(1.06);
-  transform-origin: 28% 32%;
+.portrait img.ashraf {
+  object-position: center center;
+  transform: none;
 }
 
 .portrait img,
@@ -1029,4 +1027,32 @@ html[dir="rtl"] .results-arrow svg { transform: scaleX(-1); }
 
 @media (prefers-reduced-motion: reduce) {
   .results-track { scroll-behavior: auto; }
+}
+
+.rhino-case {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.rhino-case figure {
+  min-width: 0;
+  margin: 0;
+  background: #0e1620;
+}
+
+.rhino-case img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #0e1620;
+}
+
+.rhino-case figcaption {
+  margin-top: 8px;
+  color: #c8b89a;
+  font-size: 13px;
+  font-weight: 700;
 }
